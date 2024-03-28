@@ -1,7 +1,7 @@
 {
   "name": "servequery-cli",
   "description": "Servequery CLI makes easy to manage your back office application directly from the terminal.",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "author": "Justin Malonson",
   "bin": {
     "servequery": "./bin/run"
