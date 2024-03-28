@@ -1,0 +1,130 @@
+{
+  "name": "servequery-cli",
+  "description": "Servequery CLI makes easy to manage your back office application directly from the terminal.",
+  "version": "6.0.0",
+  "author": "Justin Malonson",
+  "bin": {
+    "servequery": "./bin/run"
+  },
+  "bugs": "https://github.com/servequery/servequery-cli/issues",
+  "dependencies": {
+    "@servequery/context": "1.40.4",
+    "@servequery/datasource-sql": "2.0.0",
+    "@oclif/core": "3.18.2",
+    "@oclif/plugin-help": "6.0.12",
+    "@oclif/plugin-not-found": "3.0.10",
+    "@oclif/plugin-warn-if-update-available": "3.0.10",
+    "app-root-path": "3.0.0",
+    "atob": "2.1.2",
+    "bluebird": "3.5.2",
+    "chalk": "4.1.2",
+    "cli-table": "0.3.6",
+    "clipboardy": "2.3.0",
+    "commander": "2.9.0",
+    "dotenv": "8.2.0",
+    "handlebars": "4.7.7",
+    "inquirer": "6.2.0",
+    "joi": "17.12.2",
+    "json-diff": "1.0.0",
+    "jsonapi-serializer": "3.6.2",
+    "jsonwebtoken": "9.0.2",
+    "jwt-decode": "2.2.0",
+    "lodash": "4.17.21",
+    "mkdirp": "1.0.4",
+    "mongodb": "4.17.2",
+    "mysql2": "2.3.0",
+    "open": "7.3.0",
+    "openid-client": "4.2.2",
+    "pg": "8.11.2",
+    "pluralize": "8.0.0",
+    "progress": "2.0.3",
+    "saslprep": "1.0.3",
+    "sequelize": "6.32.1",
+    "spinnies": "0.5.1",
+    "stdout-stderr": "0.1.13",
+    "superagent": "8.1.2",
+    "tedious": "16.7.1",
+    "uuid": "8.0.0",
+    "validate-npm-package-name": "3.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@swc/core": "1.3.34",
+    "@swc/jest": "0.2.24",
+    "@types/jest": "27.0.2",
+    "@types/lodash": "4.14.191",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-oclif": "3.1.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-jest": "25.2.2",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-sonarjs": "0.5.0",
+    "fs-extra": "8.1.0",
+    "git-hooks": "1.1.10",
+    "husky": "7.0.2",
+    "jest": "27.3.1",
+    "lint-staged": "12.3.7",
+    "mock-stdin": "1.0.0",
+    "nock": "13.5.0",
+    "oclif": "4.4.2",
+    "prettier": "2.8.3",
+    "rimraf": "3.0.2",
+    "semantic-release": "19.0.3",
+    "semantic-release-slack-bot": "3.5.2",
+    "tsc-watch": "6.0.0",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/dist"
+  ],
+  "homepage": "https://github.com/servequery/servequery-cli",
+  "keywords": [
+    "servequery"
+  ],
+  "license": "GPL-3.0",
+  "main": "dist/index.js",
+  "oclif": {
+    "commands": "./dist/commands",
+    "bin": "servequery",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-warn-if-update-available",
+      "@oclif/plugin-not-found"
+    ],
+    "warn-if-update-available": {
+      "timeoutInDays": 7,
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
+      "registry": "https://www.npmjs.com/package/servequery-cli"
+    },
+    "hooks": {
+      "init": [
+        "./dist/hooks/init/check-compatible-node-version"
+      ]
+    }
+  },
+  "repository": "servequery/",
+  "scripts": {
+    "lint": "eslint src test",
+    "prepare": "husky install",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "postpack": "rm -f oclif.manifest.json",
+    "build": "tsc",
+    "build:watch": "tsc-watch --onSuccess 'yarn postbuild'",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --runInBand --coverage",
+    "postbuild": "mkdir -p ./dist/services/dumpers/templates && cp -R src/services/dumpers/templates dist/services/dumpers/"
+  }
+}

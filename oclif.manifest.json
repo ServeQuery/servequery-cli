@@ -1,0 +1,1828 @@
+{
+  "commands": {
+    "branch": {
+      "aliases": [
+        "branches"
+      ],
+      "args": {
+        "BRANCH_NAME": {
+          "description": "The name of the branch to create.",
+          "name": "BRANCH_NAME",
+          "required": false
+        }
+      },
+      "description": "Create a new branch or list your existing branches.",
+      "flags": {
+        "projectId": {
+          "description": "The id of the project to create a branch in.",
+          "name": "projectId",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "delete": {
+          "char": "d",
+          "description": "Delete the branch.",
+          "name": "delete",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "force": {
+          "description": "When deleting a branch, skip confirmation.",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "help": {
+          "description": "Display usage information.",
+          "name": "help",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "format": {
+          "char": "format",
+          "description": "Output format.",
+          "name": "format",
+          "default": "table",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "table",
+            "json"
+          ],
+          "type": "option"
+        },
+        "origin": {
+          "char": "o",
+          "description": "Set the origin of the created branch.",
+          "name": "origin",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "branch",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "branch.js"
+      ]
+    },
+    "deploy": {
+      "aliases": [
+        "environments:deploy"
+      ],
+      "args": {},
+      "description": "Deploy layout changes of the current branch to the reference one.",
+      "flags": {
+        "help": {
+          "description": "Display usage information.",
+          "name": "help",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "force": {
+          "char": "f",
+          "description": "Skip deploy confirmation.",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "projectId": {
+          "char": "p",
+          "description": "The id of the project you want to deploy.",
+          "name": "projectId",
+          "default": null,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "deploy",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "deploy.js"
+      ]
+    },
+    "environments": {
+      "aliases": [
+        "environments:list"
+      ],
+      "args": {},
+      "description": "Manage environments.",
+      "flags": {
+        "projectId": {
+          "char": "p",
+          "description": "Servequery project ID.",
+          "name": "projectId",
+          "default": null,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "format": {
+          "char": "format",
+          "description": "Ouput format.",
+          "name": "format",
+          "default": "table",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "table",
+            "json"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "environments",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "environments.js"
+      ]
+    },
+    "init": {
+      "aliases": [
+        "environments:init"
+      ],
+      "args": {},
+      "description": "Set up your development environment in your current folder.",
+      "flags": {
+        "projectId": {
+          "char": "p",
+          "description": "The id of the project you want to init.",
+          "name": "projectId",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "init",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "init.js"
+      ]
+    },
+    "login": {
+      "aliases": [],
+      "args": {},
+      "description": "Sign in with an existing account.",
+      "flags": {
+        "email": {
+          "char": "e",
+          "description": "Your Serve Query account email.",
+          "name": "email",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "password": {
+          "char": "P",
+          "description": "Your Serve Query account password (ignored if token is set).",
+          "name": "password",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "token": {
+          "char": "t",
+          "description": "Your Serve Query account token (replaces password).",
+          "name": "token",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "login",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "login.js"
+      ]
+    },
+    "logout": {
+      "aliases": [],
+      "args": {},
+      "description": "Sign out of your account.",
+      "flags": {},
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "logout",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "logout.js"
+      ]
+    },
+    "projects": {
+      "aliases": [
+        "projects:list"
+      ],
+      "args": {},
+      "description": "Manage projects.",
+      "flags": {
+        "format": {
+          "char": "format",
+          "description": "Ouput format.",
+          "name": "format",
+          "default": "table",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "table",
+            "json"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "projects",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "projects.js"
+      ]
+    },
+    "push": {
+      "aliases": [
+        "branches:push"
+      ],
+      "args": {},
+      "description": "Push layout changes of your current branch to the branch origin.",
+      "flags": {
+        "force": {
+          "description": "Skip push changes confirmation.",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "help": {
+          "description": "Display usage information.",
+          "name": "help",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "projectId": {
+          "char": "p",
+          "description": "The id of the project to work on.",
+          "name": "projectId",
+          "default": null,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "push",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "push.js"
+      ]
+    },
+    "set-origin": {
+      "aliases": [
+        "branches:origin"
+      ],
+      "args": {
+        "ENVIRONMENT_NAME": {
+          "description": "The environment to set as origin.",
+          "name": "ENVIRONMENT_NAME",
+          "required": false
+        }
+      },
+      "description": "Set an environment as your branch's origin. Your branch will build on top of that environment's layout.",
+      "flags": {
+        "help": {
+          "description": "Display usage information.",
+          "name": "help",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "set-origin",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "set-origin.js"
+      ]
+    },
+    "switch": {
+      "aliases": [
+        "branch:switch"
+      ],
+      "args": {
+        "BRANCH_NAME": {
+          "description": "The name of the local branch to set as current.",
+          "name": "BRANCH_NAME",
+          "required": false
+        }
+      },
+      "description": "Switch to another branch in your local development environment.",
+      "flags": {
+        "help": {
+          "description": "Display usage information.",
+          "name": "help",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "switch",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "switch.js"
+      ]
+    },
+    "user": {
+      "aliases": [],
+      "args": {},
+      "description": "Display the current logged in user.",
+      "flags": {},
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "user",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "user.js"
+      ]
+    },
+    "environments:create": {
+      "aliases": [],
+      "args": {},
+      "description": "Create a new environment.",
+      "flags": {
+        "projectId": {
+          "char": "p",
+          "description": "Servequery project ID.",
+          "name": "projectId",
+          "default": null,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "name": {
+          "char": "n",
+          "description": "Environment name.",
+          "name": "name",
+          "required": true,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "url": {
+          "char": "u",
+          "description": "Application URL.",
+          "name": "url",
+          "required": true,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "format": {
+          "char": "format",
+          "description": "Ouput format.",
+          "name": "format",
+          "default": "table",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "table",
+            "json"
+          ],
+          "type": "option"
+        },
+        "disableRoles": {
+          "description": "Disable roles on new environment.",
+          "name": "disableRoles",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "environments:create",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "environments",
+        "create.js"
+      ]
+    },
+    "environments:delete": {
+      "aliases": [],
+      "args": {
+        "environmentId": {
+          "description": "ID of an environment.",
+          "name": "environmentId",
+          "required": true
+        }
+      },
+      "description": "Delete an environment.",
+      "flags": {
+        "force": {
+          "char": "force",
+          "description": "Force delete.",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "environments:delete",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "environments",
+        "delete.js"
+      ]
+    },
+    "environments:get": {
+      "aliases": [],
+      "args": {
+        "environmentId": {
+          "description": "ID of an environment.",
+          "name": "environmentId",
+          "required": true
+        }
+      },
+      "description": "Get the configuration of an environment.",
+      "flags": {
+        "format": {
+          "char": "format",
+          "description": "Output format.",
+          "name": "format",
+          "default": "table",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "table",
+            "json"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "environments:get",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "environments",
+        "get.js"
+      ]
+    },
+    "environments:reset": {
+      "aliases": [],
+      "args": {},
+      "description": "Reset a remote environment by removing all layout changes",
+      "flags": {
+        "environment": {
+          "char": "e",
+          "description": "The remote environment name to reset.",
+          "name": "environment",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "force": {
+          "description": "Skip reset changes confirmation.",
+          "name": "force",
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "projectId": {
+          "char": "p",
+          "description": "The id of the project to work on.",
+          "name": "projectId",
+          "default": null,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "environments:reset",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "environments",
+        "reset.js"
+      ]
+    },
+    "environments:update": {
+      "aliases": [],
+      "args": {},
+      "description": "Update an environment.",
+      "flags": {
+        "environmentId": {
+          "char": "e",
+          "description": "The servequery environment ID to update.",
+          "name": "environmentId",
+          "required": true,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "name": {
+          "char": "n",
+          "description": "To update the environment name.",
+          "name": "name",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "url": {
+          "char": "u",
+          "description": "To update the application URL.",
+          "name": "url",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "environments:update",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "environments",
+        "update.js"
+      ]
+    },
+    "projects:create": {
+      "aliases": [],
+      "args": {
+        "applicationName": {
+          "description": "Name of the project to create.",
+          "name": "applicationName",
+          "required": true
+        }
+      },
+      "description": "Create a new Serve Query project.",
+      "flags": {
+        "databaseConnectionURL": {
+          "char": "c",
+          "description": "Enter the database credentials with a connection URL.",
+          "name": "databaseConnectionURL",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseDialect": {
+          "char": "d",
+          "description": "Enter your database dialect.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseDialect",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "mongodb",
+            "mssql",
+            "mysql / mariadb",
+            "postgres"
+          ],
+          "type": "option"
+        },
+        "databaseName": {
+          "char": "n",
+          "description": "Enter your database name.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseName",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseSchema": {
+          "char": "s",
+          "description": "Enter your database schema.",
+          "name": "databaseSchema",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseHost": {
+          "char": "h",
+          "description": "Enter your database host.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseHost",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databasePort": {
+          "char": "p",
+          "description": "Enter your database port.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databasePort",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseUser": {
+          "char": "u",
+          "description": "Enter your database user.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseUser",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databasePassword": {
+          "description": "Enter your database password.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databasePassword",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseSSL": {
+          "description": "Use SSL for database connection.",
+          "exclusive": [
+            "databaseSslMode"
+          ],
+          "name": "databaseSSL",
+          "required": false,
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "mongoDBSRV": {
+          "description": "Use SRV DNS record for mongoDB connection.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "mongoDBSRV",
+          "required": false,
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "applicationHost": {
+          "char": "H",
+          "description": "Hostname of your admin backend application.",
+          "name": "applicationHost",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "applicationPort": {
+          "char": "P",
+          "description": "Port of your admin backend application.",
+          "name": "applicationPort",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "projects:create",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "options": {
+        "databaseConnectionURL": {
+          "oclif": {
+            "char": "c",
+            "description": "Enter the database credentials with a connection URL."
+          },
+          "prompter": null
+        },
+        "databaseDialect": {
+          "choices": [
+            {
+              "name": "mongodb",
+              "value": "mongodb"
+            },
+            {
+              "name": "mssql",
+              "value": "mssql"
+            },
+            {
+              "name": "mysql / mariadb",
+              "value": "mysql"
+            },
+            {
+              "name": "postgres",
+              "value": "postgres"
+            }
+          ],
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "d",
+            "description": "Enter your database dialect."
+          },
+          "prompter": {
+            "question": "What's the database type?"
+          }
+        },
+        "databaseName": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "n",
+            "description": "Enter your database name."
+          },
+          "prompter": {
+            "question": "What's the database name?"
+          }
+        },
+        "databaseSchema": {
+          "oclif": {
+            "char": "s",
+            "description": "Enter your database schema."
+          },
+          "prompter": {
+            "question": "What's the database schema? [optional]",
+            "description": "Leave blank by default"
+          }
+        },
+        "databaseHost": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "default": "localhost",
+          "oclif": {
+            "char": "h",
+            "description": "Enter your database host."
+          },
+          "prompter": {
+            "question": "What's the database hostname?"
+          }
+        },
+        "databasePort": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "p",
+            "description": "Enter your database port."
+          },
+          "prompter": {
+            "question": "What's the database port?"
+          }
+        },
+        "databaseUser": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "u",
+            "description": "Enter your database user."
+          },
+          "prompter": {
+            "question": "What's the database user?"
+          }
+        },
+        "databasePassword": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "description": "Enter your database password."
+          },
+          "prompter": {
+            "question": "What's the database password? [optional]"
+          }
+        },
+        "databaseSSL": {
+          "exclusive": [
+            "databaseSslMode"
+          ],
+          "type": "boolean",
+          "default": false,
+          "oclif": {
+            "description": "Use SSL for database connection."
+          },
+          "prompter": null
+        },
+        "mongoDBSRV": {
+          "type": "boolean",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "default": false,
+          "oclif": {
+            "description": "Use SRV DNS record for mongoDB connection."
+          },
+          "prompter": {
+            "question": "Use a SRV connection string?"
+          }
+        },
+        "applicationHost": {
+          "default": "http://localhost",
+          "oclif": {
+            "char": "H",
+            "description": "Hostname of your admin backend application."
+          },
+          "prompter": {
+            "question": "What's the IP/hostname on which your application will be running?"
+          }
+        },
+        "applicationPort": {
+          "default": "3310",
+          "oclif": {
+            "char": "P",
+            "description": "Port of your admin backend application."
+          },
+          "prompter": {
+            "question": "What's the port on which your application will be running?"
+          }
+        }
+      },
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "projects",
+        "create.js"
+      ]
+    },
+    "projects:get": {
+      "aliases": [],
+      "args": {
+        "projectId": {
+          "description": "ID of a project.",
+          "name": "projectId",
+          "required": true
+        }
+      },
+      "description": "Get the configuration of a project.",
+      "flags": {
+        "format": {
+          "char": "f",
+          "description": "Ouput format.",
+          "name": "format",
+          "default": "table",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "table",
+            "json"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "projects:get",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "projects",
+        "get.js"
+      ]
+    },
+    "schema:apply": {
+      "aliases": [],
+      "args": {},
+      "description": "Apply the current schema of your repository to the specified environment (using your \".servequery-schema.json\" file).",
+      "flags": {
+        "secret": {
+          "char": "s",
+          "description": "Environment secret of the project (SERVEQUERY_ENV_SECRET).",
+          "name": "secret",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "schema:apply",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "schema",
+        "apply.js"
+      ]
+    },
+    "schema:diff": {
+      "aliases": [],
+      "args": {
+        "environmentIdFrom": {
+          "description": "ID of an environment to compare.",
+          "name": "environmentIdFrom",
+          "required": true
+        },
+        "environmentIdTo": {
+          "description": "ID of an environment to compare.",
+          "name": "environmentIdTo",
+          "required": true
+        }
+      },
+      "description": "Allow to compare two environment schemas",
+      "flags": {
+        "help": {
+          "description": "Display usage information.",
+          "name": "help",
+          "allowNo": false,
+          "type": "boolean"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "schema:diff",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "schema",
+        "diff.js"
+      ]
+    },
+    "schema:update": {
+      "aliases": [],
+      "args": {},
+      "description": "Refresh your schema by generating files that do not currently exist.",
+      "flags": {
+        "config": {
+          "char": "c",
+          "dependsOn": [],
+          "description": "Database configuration file to use.",
+          "exclusive": [],
+          "name": "config",
+          "required": false,
+          "default": "config/databases.js",
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "outputDirectory": {
+          "char": "o",
+          "dependsOn": [],
+          "description": "Output directory where to generate new files.",
+          "exclusive": [],
+          "name": "outputDirectory",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "schema:update",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "strict": true,
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "schema",
+        "update.js"
+      ]
+    },
+    "projects:create:nosql": {
+      "aliases": [],
+      "args": {
+        "applicationName": {
+          "description": "Name of the project to create.",
+          "name": "applicationName",
+          "required": true
+        }
+      },
+      "description": "Create a new Serve Query project.",
+      "flags": {
+        "databaseConnectionURL": {
+          "char": "c",
+          "description": "Enter the database credentials with a connection URL.",
+          "name": "databaseConnectionURL",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseName": {
+          "char": "n",
+          "description": "Enter your database name.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseName",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseHost": {
+          "char": "h",
+          "description": "Enter your database host.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseHost",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databasePort": {
+          "char": "p",
+          "description": "Enter your database port.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databasePort",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseUser": {
+          "char": "u",
+          "description": "Enter your database user.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseUser",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databasePassword": {
+          "description": "Enter your database password.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databasePassword",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseSslMode": {
+          "description": "SSL mode.",
+          "exclusive": [
+            "databaseSSL"
+          ],
+          "name": "databaseSslMode",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "preferred",
+            "verify",
+            "required",
+            "disabled"
+          ],
+          "type": "option"
+        },
+        "databaseSSL": {
+          "description": "Use SSL for database connection.",
+          "exclusive": [
+            "databaseSslMode"
+          ],
+          "name": "databaseSSL",
+          "required": false,
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "mongoDBSRV": {
+          "description": "Use SRV DNS record for mongoDB connection.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "mongoDBSRV",
+          "required": false,
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "applicationHost": {
+          "char": "H",
+          "description": "Hostname of your admin backend application.",
+          "name": "applicationHost",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "applicationPort": {
+          "char": "P",
+          "description": "Port of your admin backend application.",
+          "name": "applicationPort",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "language": {
+          "char": "l",
+          "description": "Choose the language you want to use for your project.",
+          "name": "language",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "projects:create:nosql",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "options": {
+        "databaseConnectionURL": {
+          "oclif": {
+            "char": "c",
+            "description": "Enter the database credentials with a connection URL."
+          },
+          "prompter": null
+        },
+        "databaseName": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "n",
+            "description": "Enter your database name."
+          },
+          "prompter": {
+            "question": "What's the database name?"
+          }
+        },
+        "databaseHost": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "default": "localhost",
+          "oclif": {
+            "char": "h",
+            "description": "Enter your database host."
+          },
+          "prompter": {
+            "question": "What's the database hostname?"
+          }
+        },
+        "databasePort": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "p",
+            "description": "Enter your database port."
+          },
+          "prompter": {
+            "question": "What's the database port?"
+          }
+        },
+        "databaseUser": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "u",
+            "description": "Enter your database user."
+          },
+          "prompter": {
+            "question": "What's the database user?"
+          }
+        },
+        "databasePassword": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "description": "Enter your database password."
+          },
+          "prompter": {
+            "question": "What's the database password? [optional]"
+          }
+        },
+        "databaseSslMode": {
+          "exclusive": [
+            "databaseSSL"
+          ],
+          "choices": [
+            {
+              "name": "preferred",
+              "value": "preferred"
+            },
+            {
+              "name": "verify",
+              "value": "verify"
+            },
+            {
+              "name": "required",
+              "value": "required"
+            },
+            {
+              "name": "disabled",
+              "value": "disabled"
+            }
+          ],
+          "default": "preferred",
+          "oclif": {
+            "description": "SSL mode."
+          },
+          "prompter": null
+        },
+        "databaseSSL": {
+          "exclusive": [
+            "databaseSslMode"
+          ],
+          "type": "boolean",
+          "default": false,
+          "oclif": {
+            "description": "Use SSL for database connection."
+          },
+          "prompter": null
+        },
+        "mongoDBSRV": {
+          "type": "boolean",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "default": false,
+          "oclif": {
+            "description": "Use SRV DNS record for mongoDB connection."
+          },
+          "prompter": {
+            "question": "Use a SRV connection string?"
+          }
+        },
+        "applicationHost": {
+          "default": "http://localhost",
+          "oclif": {
+            "char": "H",
+            "description": "Hostname of your admin backend application."
+          },
+          "prompter": {
+            "question": "What's the IP/hostname on which your application will be running?"
+          }
+        },
+        "applicationPort": {
+          "default": "3310",
+          "oclif": {
+            "char": "P",
+            "description": "Port of your admin backend application."
+          },
+          "prompter": {
+            "question": "What's the port on which your application will be running?"
+          }
+        },
+        "language": {
+          "choices": [
+            {
+              "name": "javascript",
+              "value": {
+                "name": "javascript",
+                "fileExtension": "js"
+              }
+            },
+            {
+              "name": "typescript",
+              "value": {
+                "name": "typescript",
+                "fileExtension": "ts"
+              }
+            }
+          ],
+          "default": {
+            "name": "javascript",
+            "fileExtension": "js"
+          },
+          "oclif": {
+            "char": "l",
+            "description": "Choose the language you want to use for your project."
+          },
+          "prompter": {
+            "question": "In which language would you like to generate your sources?"
+          }
+        }
+      },
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "projects",
+        "create",
+        "nosql.js"
+      ]
+    },
+    "projects:create:sql": {
+      "aliases": [],
+      "args": {
+        "applicationName": {
+          "description": "Name of the project to create.",
+          "name": "applicationName",
+          "required": true
+        }
+      },
+      "description": "Create a new Serve Query project.",
+      "flags": {
+        "databaseConnectionURL": {
+          "char": "c",
+          "description": "Enter the database credentials with a connection URL.",
+          "name": "databaseConnectionURL",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseDialect": {
+          "char": "d",
+          "description": "Enter your database dialect.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseDialect",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "mssql",
+            "mysql / mariadb",
+            "postgres"
+          ],
+          "type": "option"
+        },
+        "databaseName": {
+          "char": "n",
+          "description": "Enter your database name.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseName",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseSchema": {
+          "char": "s",
+          "description": "Enter your database schema.",
+          "name": "databaseSchema",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseHost": {
+          "char": "h",
+          "description": "Enter your database host.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseHost",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databasePort": {
+          "char": "p",
+          "description": "Enter your database port.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databasePort",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseUser": {
+          "char": "u",
+          "description": "Enter your database user.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databaseUser",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databasePassword": {
+          "description": "Enter your database password.",
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "name": "databasePassword",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "databaseSslMode": {
+          "description": "SSL mode.",
+          "exclusive": [
+            "databaseSSL"
+          ],
+          "name": "databaseSslMode",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "preferred",
+            "verify",
+            "required",
+            "disabled"
+          ],
+          "type": "option"
+        },
+        "databaseSSL": {
+          "description": "Use SSL for database connection.",
+          "exclusive": [
+            "databaseSslMode"
+          ],
+          "name": "databaseSSL",
+          "required": false,
+          "allowNo": false,
+          "type": "boolean"
+        },
+        "applicationHost": {
+          "char": "H",
+          "description": "Hostname of your admin backend application.",
+          "name": "applicationHost",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "applicationPort": {
+          "char": "P",
+          "description": "Port of your admin backend application.",
+          "name": "applicationPort",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "type": "option"
+        },
+        "language": {
+          "char": "l",
+          "description": "Choose the language you want to use for your project.",
+          "name": "language",
+          "required": false,
+          "hasDynamicHelp": false,
+          "multiple": false,
+          "options": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "option"
+        }
+      },
+      "hasDynamicHelp": false,
+      "hiddenAliases": [],
+      "id": "projects:create:sql",
+      "pluginAlias": "servequery-cli",
+      "pluginName": "servequery-cli",
+      "pluginType": "core",
+      "options": {
+        "databaseConnectionURL": {
+          "oclif": {
+            "char": "c",
+            "description": "Enter the database credentials with a connection URL."
+          },
+          "prompter": null
+        },
+        "databaseDialect": {
+          "choices": [
+            {
+              "name": "mssql",
+              "value": "mssql"
+            },
+            {
+              "name": "mysql / mariadb",
+              "value": "mysql"
+            },
+            {
+              "name": "postgres",
+              "value": "postgres"
+            }
+          ],
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "d",
+            "description": "Enter your database dialect."
+          },
+          "prompter": {
+            "question": "What's the database type?"
+          }
+        },
+        "databaseName": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "n",
+            "description": "Enter your database name."
+          },
+          "prompter": {
+            "question": "What's the database name?"
+          }
+        },
+        "databaseSchema": {
+          "oclif": {
+            "char": "s",
+            "description": "Enter your database schema."
+          },
+          "prompter": {
+            "question": "What's the database schema? [optional]",
+            "description": "Leave blank by default"
+          }
+        },
+        "databaseHost": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "default": "localhost",
+          "oclif": {
+            "char": "h",
+            "description": "Enter your database host."
+          },
+          "prompter": {
+            "question": "What's the database hostname?"
+          }
+        },
+        "databasePort": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "p",
+            "description": "Enter your database port."
+          },
+          "prompter": {
+            "question": "What's the database port?"
+          }
+        },
+        "databaseUser": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "char": "u",
+            "description": "Enter your database user."
+          },
+          "prompter": {
+            "question": "What's the database user?"
+          }
+        },
+        "databasePassword": {
+          "exclusive": [
+            "databaseConnectionURL"
+          ],
+          "oclif": {
+            "description": "Enter your database password."
+          },
+          "prompter": {
+            "question": "What's the database password? [optional]"
+          }
+        },
+        "databaseSslMode": {
+          "exclusive": [
+            "databaseSSL"
+          ],
+          "choices": [
+            {
+              "name": "preferred",
+              "value": "preferred"
+            },
+            {
+              "name": "verify",
+              "value": "verify"
+            },
+            {
+              "name": "required",
+              "value": "required"
+            },
+            {
+              "name": "disabled",
+              "value": "disabled"
+            }
+          ],
+          "default": "preferred",
+          "oclif": {
+            "description": "SSL mode."
+          },
+          "prompter": null
+        },
+        "databaseSSL": {
+          "exclusive": [
+            "databaseSslMode"
+          ],
+          "type": "boolean",
+          "default": false,
+          "oclif": {
+            "description": "Use SSL for database connection."
+          },
+          "prompter": null
+        },
+        "applicationHost": {
+          "default": "http://localhost",
+          "oclif": {
+            "char": "H",
+            "description": "Hostname of your admin backend application."
+          },
+          "prompter": {
+            "question": "What's the IP/hostname on which your application will be running?"
+          }
+        },
+        "applicationPort": {
+          "default": "3310",
+          "oclif": {
+            "char": "P",
+            "description": "Port of your admin backend application."
+          },
+          "prompter": {
+            "question": "What's the port on which your application will be running?"
+          }
+        },
+        "language": {
+          "choices": [
+            {
+              "name": "javascript",
+              "value": {
+                "name": "javascript",
+                "fileExtension": "js"
+              }
+            },
+            {
+              "name": "typescript",
+              "value": {
+                "name": "typescript",
+                "fileExtension": "ts"
+              }
+            }
+          ],
+          "default": {
+            "name": "javascript",
+            "fileExtension": "js"
+          },
+          "oclif": {
+            "char": "l",
+            "description": "Choose the language you want to use for your project."
+          },
+          "prompter": {
+            "question": "In which language would you like to generate your sources?"
+          }
+        }
+      },
+      "isESM": false,
+      "relativePath": [
+        "dist",
+        "commands",
+        "projects",
+        "create",
+        "sql.js"
+      ]
+    }
+  },
+  "version": "5.1.0"
+}

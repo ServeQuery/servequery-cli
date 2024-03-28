@@ -1,0 +1,5 @@
+const JSONAPISerializer = require('jsonapi-serializer').Serializer;
+module.exports = new JSONAPISerializer('jobs', {
+    attributes: ['state', 'progress'],
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiam9iLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL3NlcmlhbGl6ZXJzL2pvYi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLGlCQUFpQixHQUFHLE9BQU8sQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDLFVBQVUsQ0FBQztBQUVuRSxNQUFNLENBQUMsT0FBTyxHQUFHLElBQUksaUJBQWlCLENBQUMsTUFBTSxFQUFFO0lBQzdDLFVBQVUsRUFBRSxDQUFDLE9BQU8sRUFBRSxVQUFVLENBQUM7Q0FDbEMsQ0FBQyxDQUFDIn0=

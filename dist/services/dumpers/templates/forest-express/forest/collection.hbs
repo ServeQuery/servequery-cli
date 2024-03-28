@@ -1,0 +1,13 @@
+const { collection } = require('servequery-express-{{#if isMongoDB }}mongoose{{else}}sequelize{{/if}}');
+
+// This file allows you to add to your Servequery UI:
+// - Smart actions: https://docs.servequery.com/documentation/reference-guide/actions/create-and-manage-smart-actions
+// - Smart fields: https://docs.servequery.com/documentation/reference-guide/fields/create-and-manage-smart-fields
+// - Smart relationships: https://docs.servequery.com/documentation/reference-guide/relationships/create-a-smart-relationship
+// - Smart segments: https://docs.servequery.com/documentation/reference-guide/segments/smart-segments
+collection('{{ table }}', {
+  actions: [],
+  fields: [],
+  segments: [],
+  {{#if isMongoDB }}fieldsToFlatten: [],{{/if}}
+});

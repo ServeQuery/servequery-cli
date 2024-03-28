@@ -1,0 +1,41 @@
+export = ServequeryExpress;
+declare class ServequeryExpress extends AbstractDumper {
+    static getModelsNameSorted(schema: any): string[];
+    static shouldSkipRouteGenerationForModel(modelName: any): boolean;
+    static isLocalUrl(url: any): boolean;
+    constructor(context: any);
+    templateFolder: string;
+    DEFAULT_PORT: number;
+    env: any;
+    isLinuxOs: any;
+    Sequelize: any;
+    Handlebars: any;
+    mkdirp: any;
+    lodash: any;
+    buildDatabaseUrl: any;
+    isDatabaseLocal: any;
+    toValidPackageName: any;
+    strings: any;
+    getSafeReferences(references: any): any;
+    writePackageJson(dbDialect: any, appName: any): void;
+    tableToFilename(table: any): any;
+    getApplicationUrl(appHostname: any, appPort: any): any;
+    writeDotEnv(config: any): void;
+    getModelNameFromTableName(table: any): any;
+    writeModel(config: any, table: any, fields: any, references: any, options?: {}): void;
+    writeRoute(dbDialect: any, modelName: any): void;
+    writeServequeryCollection(dbDialect: any, table: any): void;
+    writeAppJs(dbDialect: any): void;
+    writeModelsIndex(dbDialect: any): void;
+    writeDatabasesConfig(dbDialect: any): void;
+    writeDockerfile(): void;
+    writeDockerCompose(config: any): void;
+    writeServequeryMiddleware(dbDialect: any): void;
+    createFiles(config: any, schema: any): Promise<void>;
+    checkServequeryCLIProjectStructure(): void;
+    checkLianaCompatiblityForUpdate(): void;
+    hasMultipleDatabaseStructure(): boolean;
+}
+import AbstractDumper_1 = require("./abstract-dumper");
+import AbstractDumper = AbstractDumper_1.default ;
+//# sourceMappingURL=servequery-express.d.ts.map

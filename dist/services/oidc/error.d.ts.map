@@ -1,0 +1,1 @@
+{"version":3,"file":"error.d.ts","sourceRoot":"","sources":["../../../src/services/oidc/error.ts"],"names":[],"mappings":"AAEA,OAAO,gBAAgB,MAAM,gCAAgC,CAAC;AAE9D,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,gBAAgB;gBACzC,OAAO,EAAE,MAAM,EAAE,MAAM,CAAC,EAAE,KAAK,EAAE,gBAAgB,CAAC,EAAE,MAAM;CAoBvE"}

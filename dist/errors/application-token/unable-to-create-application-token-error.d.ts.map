@@ -1,0 +1,1 @@
+{"version":3,"file":"unable-to-create-application-token-error.d.ts","sourceRoot":"","sources":["../../../src/errors/application-token/unable-to-create-application-token-error.js"],"names":[],"mappings":";AAEA;IACE;;;;;OAKG;IACH,sBALW;QACV,MAAS,CAAC,EAAE,MAAM,CAAC;QACnB,gBAAmB,CAAC,EAAE,MAAM,CAAA;KACzB,EAKH;IADC,aAAiD;CAEpD"}

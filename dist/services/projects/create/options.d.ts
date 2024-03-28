@@ -1,0 +1,38 @@
+import type { Language } from '../../../utils/languages';
+import type { CommandOptions } from '../../../utils/option-parser';
+export type ProjectCreateOptions = {
+    applicationName: string;
+    applicationHost: string;
+    applicationPort: string;
+    databaseConnectionURL?: string;
+    databaseName?: string;
+    databaseHost?: string;
+    databasePort?: string;
+    databaseUser?: string;
+    databasePassword?: string;
+    databaseSSL?: boolean;
+    databaseSslMode?: 'preferred' | 'disabled' | 'required' | 'verify';
+    databaseDialect?: 'mariadb' | 'mssql' | 'mysql' | 'postgres' | 'mongodb';
+    databaseSchema?: string;
+    mongoDBSRV?: boolean;
+    language?: Language;
+};
+type Option = CommandOptions<ProjectCreateOptions>[string];
+export declare function getDialect(options: ProjectCreateOptions): ProjectCreateOptions['databaseDialect'];
+export declare const applicationHost: Option;
+export declare const applicationPort: Option;
+export declare const databaseConnectionURL: Option;
+export declare const databaseName: Option;
+export declare const databaseHost: Option;
+export declare const databasePort: Option;
+export declare const databaseUser: Option;
+export declare const databasePassword: Option;
+export declare const databaseSSL: Option;
+export declare const databaseSslMode: Option;
+export declare const language: Option;
+export declare const databaseDialectV1: Option;
+export declare const databaseDialectSqlV2: Option;
+export declare const databaseSchema: Option;
+export declare const mongoDBSRV: Option;
+export {};
+//# sourceMappingURL=options.d.ts.map

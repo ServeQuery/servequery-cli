@@ -1,0 +1,5 @@
+const JSONAPIDeserializer = require('jsonapi-serializer').Deserializer;
+module.exports = new JSONAPIDeserializer({
+    keyForAttribute: 'camelCase',
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZW52aXJvbm1lbnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvZGVzZXJpYWxpemVycy9lbnZpcm9ubWVudC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLG1CQUFtQixHQUFHLE9BQU8sQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDLFlBQVksQ0FBQztBQUV2RSxNQUFNLENBQUMsT0FBTyxHQUFHLElBQUksbUJBQW1CLENBQUM7SUFDdkMsZUFBZSxFQUFFLFdBQVc7Q0FDN0IsQ0FBQyxDQUFDIn0=
